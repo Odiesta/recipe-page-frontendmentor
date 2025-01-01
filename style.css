@@ -1,0 +1,254 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 18%, 87%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Outfit", serif;
+  color: var(--stone-600);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--stone-100);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.section-hr {
+  margin: 0 2rem;
+  border: none;
+  border-top: 1px solid var(--stone-150);
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 70rem;
+  margin: 2rem;
+  border-radius: 1rem;
+}
+
+.food-image {
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-family: "Young Serif", serif;
+  line-height: 100%;
+  color: var(--stone-900);
+  padding: 0 1rem;
+  font-weight: 400;
+}
+
+.title-description {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* SECTION PREPARATION */
+
+.section-preparation {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--rose-50);
+  border-radius: 1.5rem;
+}
+
+.preparation-title {
+  font-size: 2rem;
+  color: var(--rose-800);
+}
+
+.preparation-list {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.preparation-item {
+  padding: 1rem 0;
+  padding-right: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.preparation-item::before {
+  content: "\2B24";
+  font-size: 0.5rem;
+  color: var(--brown-800);
+  margin-right: 2rem;
+}
+
+/* SECTION INGREDIENTS */
+
+.section-ingredients {
+  margin: 2rem 0;
+  padding: 0 3rem;
+}
+
+.ingredients-title {
+  font-size: 2.8rem;
+  color: var(--brown-800);
+}
+
+.ingredients-list {
+  padding: 2rem 1rem;
+}
+
+.ingredients-item {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.ingredients-item::before {
+  content: "\2B24";
+  font-size: 0.5rem;
+  color: var(--brown-800);
+  margin-right: 2rem;
+}
+
+/* SECTION INSTRUCTIONS */
+
+.section-instructions {
+  margin: 2rem 0;
+  padding: 0 3rem;
+}
+
+.instructions-title {
+  font-size: 2.8rem;
+  color: var(--brown-800);
+}
+
+.instructions-list {
+  padding: 1rem 2rem;
+}
+
+.instructions-step {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.instructions-step::marker {
+  font-weight: 700;
+  color: var(--brown-800);
+}
+
+/* SECTION NUTRITION */
+
+.section-nutrition {
+  margin: 2rem 0;
+  padding: 0 3rem;
+}
+
+.nutrition-title {
+  font-size: 2.8rem;
+  color: var(--brown-800);
+}
+
+.nutrition-description {
+  margin-top: 2rem;
+}
+
+.nutrition-content-container {
+  margin-top: 1rem;
+}
+
+.nutrition-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 1rem 0;
+}
+
+.nutrition-group:not(:last-child) {
+  border-bottom: 1px solid var(--stone-100);
+}
+
+.nutrition-name {
+  margin: 0 2rem;
+  font-weight: 500;
+}
+
+.nutrition-value {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 25em) {
+  .container {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .food-image {
+    padding: 0;
+    border-radius: 0;
+  }
+}
