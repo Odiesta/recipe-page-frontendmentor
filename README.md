@@ -63,6 +63,8 @@ the list item has display set to flex and align-items set to center. this will m
 
 There are unexpected problem that i face as i put `<b>` tag inside the list item and it turn out the bold text and the rest of text as separate element. To fix this i wrapped each content in list inside paragraph. so it will be treated as one element even if it has more inline element like `<span>` or `i` tag.
 
+---
+
 I use CSS Grid to achieve evenly column in nutrition section. this is a solution that i create
 
 ```css
@@ -74,6 +76,8 @@ I use CSS Grid to achieve evenly column in nutrition section. this is a solution
 ```
 
 the grid-template columns will have 2 evenly width element in one row. the `minmax(0, 1fr)` will make sure the content width can go as low as 0 and as wide as 1fr.
+
+---
 
 To set the resolution on media queries need to em or px to make it correct. before it i try to use rem but it output strange result like it's not the right result as i calculated base on font-size i define in html selector.
 
